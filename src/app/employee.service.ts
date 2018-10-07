@@ -27,6 +27,7 @@ export class EmployeeService {
    }
 
    UpdateEmployee(Employee){
+     
     return this._http.get('http://localhost:61377/api/UpdateEmployee?id='+Employee.ID+'&firstname='+Employee.FirstName+'&lastname='+Employee.LastName+'&salary='+Employee.SAL+'&age='+Employee.Age+'&designation='+Employee.DESIGNATION)
     .subscribe((res: any) => {
     }, error => console.log = error);
