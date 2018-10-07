@@ -1,0 +1,25 @@
+
+<router-outlet></router-outlet>
+<h2>New Employee Registration </h2>
+{{Employee | json}}
+<form>
+    Id:<br>
+  <input type="text" name="ID" value="" #ID="ngModel" [(ngModel)]="Employee.ID">
+  <br>
+  First name:<br>
+  <input type="text" name="firstname" value="" #firstname="ngModel" [(ngModel)]="Employee.firstname">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="" #lastname="ngModel" [(ngModel)]="Employee.lastname">
+  <br>
+  Age:<br>
+  <input type="text" name="Age" value="" #Age="ngModel" [(ngModel)]="Employee.Age">
+  <br>
+  SAL:<br>
+  <input type="text" name="salary" value="" #salary="ngModel" [(ngModel)]="Employee.salary">
+<br>
+  Designation:<br>
+  <input type="text" name="Designation" value="" #Designation="ngModel" [(ngModel)]="Employee.Designation">
+  <br>
+  <input type="submit" value="Save" (click)="AddEmployee(Employee)">
+</form> 

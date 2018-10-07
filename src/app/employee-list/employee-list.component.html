@@ -1,18 +1,24 @@
-
 <table style="width:100%" border="1">
   <tr>
-    <th>Firstname</th>
-    <th>Lastname</th> 
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td> 
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td> 
-    <td>94</td>
-  </tr>
+    <th>ID</th>
+    <th>FIRSTNAMER</th> 
+    <th>LASTNAME</th>
+    <th>SAL</th>
+    <th>DESIGNATION</th>
+    <th>AGE</th>
+    <th>Edit/Delete / <button mat-button (click)="AddEmployee()">AddEmployee</button></th>
+  </tr> 
+  <tr *ngFor="let item of employee">
+      <td>{{item.ID}}</td>
+      <td>{{item.FirstName}}</td>
+      <td>{{item.LastName}}</td>
+      <td>{{item.SAL}}</td>
+      <td>{{item.DESIGNATION}}</td>
+      <td>{{item.Age}}</td>
+      <td>
+        <button mat-button (click)="Edit(item.ID)">Edit</button>
+        <button mat-button (click)="Delete(item.ID)">Delete</button>
+      </td>
+    </tr>
 </table>
+<router-outlet></router-outlet>

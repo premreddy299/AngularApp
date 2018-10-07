@@ -1,0 +1,27 @@
+
+
+<router-outlet></router-outlet>
+<h2>Update Employee </h2>
+{{employeetemp | json}}
+<form>
+
+    ID:<br>
+  <input type="text" name="id" value="" #id="ngModel" [(ngModel)]="employeetemp.ID">
+  <br>
+  First name:<br>
+  <input type="text" name="firstname" value="" #FirstName="ngModel" [(ngModel)]="employeetemp.FirstName">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="" #LastName="ngModel" [(ngModel)]="employeetemp.LastName">
+  <br>
+  Age:<br>
+  <input type="text" name="Age" value="" #Age="ngModel" [(ngModel)]="employeetemp.Age">
+  <br>
+  SAL:<br>
+  <input type="text" name="salary" value="" #SAL="ngModel" [(ngModel)]="employeetemp.SAL">
+<br>
+  Designation:<br>
+  <input type="text" name="Designation" value=""  #DESIGNATION="ngModel" [(ngModel)]="employeetemp.DESIGNATION">
+  <br>
+  <input type="submit" value="Update" (click)="UpdateEmployee()">
+</form> 
